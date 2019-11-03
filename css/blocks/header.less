@@ -1,0 +1,30 @@
+// main: ../index.less
+header, footer{
+  color: #fff;
+  background: @bg_gradient;
+  padding: 1vw 2vw;
+  border-bottom: 0.1vw #000 solid;
+  position: fixed;
+  width: 100vw;
+  z-index: 1000
+}
+header>img{
+  transform: translateY(25%);  
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  border-top: 0.1vw #000 solid;
+  text-align: center;
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

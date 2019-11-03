@@ -1,0 +1,109 @@
+	// main: ../index.less
+#create-menu:focus
+{
+	display: none;
+}
+#create-menu>.select
+{
+	font-size: 1.5vw;
+}
+#create-menu>form
+{
+	background-color: #eee;
+	border: 0.1vw solid black;
+	bottom: 0;
+	height: 30vw;
+	left: 0;
+	left: 50%;
+	padding: 1vw;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 20vw;
+}
+#create-menu>form>*
+{
+	margin: 0.5vw 0;
+	width: 18vw;
+}
+#input-title.alert
+{
+	border-color: rgb(255, 0, 0);
+}
+#input-title.alert::placeholder
+{
+	color: rgb(255, 0, 0);
+}
+.create-menu__btn
+{
+	background-color: #ccc;
+	border: 0.1vw solid black;
+	border-radius: 1vw;
+	cursor: pointer;
+	height: 3vw;
+	outline: none;
+}
+.create-menu__btn:hover
+{
+	background-color: black;
+	color: white;
+	transition: background-color 0.3s linear, color 0.3s linear;
+}
+.create-menu__buttons
+{
+	bottom: 1vw;
+	display: flex;
+	justify-content: space-between;
+	margin: 0!important;
+	position: absolute;
+}
+.create-menu__cancel
+{
+	cursor: pointer;
+	padding: 0.2vw 0.25vw;
+}
+.create-menu__input
+{
+	border: 0.1vw solid black;
+	padding: 0.25vw;
+	resize: none;
+	width: 18vw;
+}
+.select
+{
+	background: #fff;
+	border-radius: 1vw;
+	display: flex;
+	height: 1.5vw;
+	height: 2vw;
+	line-height: 3;
+	overflow: hidden;
+	padding: 0 1vw;
+	position: relative;
+	width: 8vw;
+	border: 0.1vw #000 solid;
+}
+
+#create-menu
+{
+	background: rgba(0,0,0,0.5);
+	font-size: 3vw;
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: 1002;
+}
+select
+{
+	background: #fff;
+	border: none;
+	box-shadow: none;
+	color: #000;
+	cursor: pointer;
+	flex: 1;
+	outline: 0;
+}

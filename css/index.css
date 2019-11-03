@@ -1,0 +1,392 @@
+/*
+      www.OnlineWebFonts.Com 
+      You must credit the author Copy this link on your web 
+      <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
+      OR
+      <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
+*/
+@font-face {
+  font-family: "ITC Bauhaus";
+  src: url("http://db.onlinewebfonts.com/t/ba30d215ed1f0e32cb3b560b9b93bde1.eot");
+  /* IE9*/
+  src: url("http://db.onlinewebfonts.com/t/ba30d215ed1f0e32cb3b560b9b93bde1.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("http://db.onlinewebfonts.com/t/ba30d215ed1f0e32cb3b560b9b93bde1.woff2") format("woff2"), /* chrome firefox */ url("http://db.onlinewebfonts.com/t/ba30d215ed1f0e32cb3b560b9b93bde1.woff") format("woff"), /* chrome firefox */ url("http://db.onlinewebfonts.com/t/ba30d215ed1f0e32cb3b560b9b93bde1.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/ url("http://db.onlinewebfonts.com/t/ba30d215ed1f0e32cb3b560b9b93bde1.svg#ITC Bauhaus") format("svg");
+  /* iOS 4.1- */
+}
+body {
+  margin: 0;
+  padding: 0 0 10vh 0;
+  background: #b0c4de;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "ITC Bauhaus";
+  font-size: 1.5vw;
+  word-break: break-word;
+}
+i,
+i::before {
+  font-family: "Font Awesome 5 Pro" !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.hide {
+  display: none;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.container {
+  max-width: 64vw;
+  display: inline-block;
+  text-align: left;
+}
+header,
+footer {
+  color: #fff;
+  background: linear-gradient(-45deg, #1c61fc, #54ffdf);
+  padding: 1vw 2vw;
+  border-bottom: 0.1vw #000 solid;
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
+}
+header > img {
+  transform: translateY(25%);
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  border-top: 0.1vw #000 solid;
+  text-align: center;
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#cards-grid {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 6vw 20vw;
+}
+* {
+  transition: 0.25s;
+}
+.card__description,
+.card__title {
+  max-width: 13vw;
+  min-height: 3.125vw;
+  word-break: break-all break-word;
+}
+.card__down {
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 1vw 0;
+  position: absolute;
+  width: 12.7vw;
+}
+.card__edit {
+  position: relative;
+  text-align: center;
+}
+.card__edit:hover .extra-menu {
+  display: block;
+}
+.card__priority,
+.extra-img,
+.ok {
+  border: 0.1vw inset black;
+  border-radius: 1vw;
+  cursor: pointer;
+  padding: 0.5vw;
+}
+.card__title {
+  font-weight: bold;
+}
+.card__wrapper {
+  background: #ffe0d0;
+  border: 0.1vw solid black;
+  border-radius: 1vw;
+  display: inline-flex;
+  margin: 0 1vw 1vw 0;
+  min-height: 15vw;
+  padding: 1vw 1vw 5.3vw 1vw;
+  position: relative;
+  text-align: left;
+  width: 15vw;
+}
+.card__wrapper.open {
+  background: #fff;
+}
+.card__wrapper.open > .card__text > .card__title {
+  color: #000;
+  text-decoration: none;
+}
+.card__wrapper.open > i.done {
+  display: none;
+}
+.card__wrapper.open > i.undone {
+  color: #000;
+  display: block;
+  font-size: 1.25vw;
+  height: 2vw;
+  position: absolute;
+  right: 1vw;
+  text-align: center;
+  top: 1vw;
+  width: 2vw;
+}
+.card__wrapper:hover {
+  box-shadow: 0 0 0.2vw 0 rgba(0, 0, 0, 0.5);
+  transform: scale(1.025);
+}
+.card__wrapper > .card__text > .card__title {
+  color: #888;
+  text-decoration: line-through;
+}
+.card__wrapper > i.done {
+  color: #000;
+  display: block;
+  font-size: 1.25vw;
+  height: 2vw;
+  position: absolute;
+  right: 1vw;
+  text-align: center;
+  top: 1vw;
+  width: 2vw;
+}
+.card__wrapper > i.undone {
+  display: none;
+}
+.edited-description {
+  height: 4vw;
+  height: fit-content;
+  resize: none;
+  height: -webkit-fill-available;
+  max-height: 13.75vw;
+}
+.edited-priority {
+  font-size: 1.5vw!important;
+}
+.edited-title,
+.edited-description {
+  background: transparent;
+  border: none;
+  border-bottom: 0.05vw #000 solid;
+  font-size: 1.25vw;
+  margin: 0.5vw 0;
+  min-height: 2.125vw;
+  width: 100%;
+}
+.edit-select {
+  border-radius: 1vw!important;
+  min-height: 3.125vw!important;
+  width: fit-content !important;
+}
+.edit-select::after {
+  display: none;
+}
+.extra-img {
+  font-size: 1vw!important;
+  height: 3vw;
+  min-width: 3vw;
+  padding: 0.75vw 0.5vw 0.5vw;
+}
+.extra-menu {
+  cursor: context-menu;
+  position: absolute;
+  display: none;
+  text-align: left;
+  transform: translateX(-1.8vw) translateY(-100%) translateY(1.15vw);
+}
+.extra-menu > button {
+  background-color: #ccc;
+  border: 0.1vw #000 solid;
+  font-size: 1vw;
+  outline: none;
+  padding: 1vh;
+  width: 6vw;
+}
+.extra-menu > button:hover {
+  background-color: #eee;
+  cursor: context-menu;
+}
+.extra-menu__delete {
+  background-color: #f77!important;
+  color: #fff;
+}
+.extra-menu__delete:hover {
+  background-color: #f99!important;
+}
+.extra-menu__edit {
+  border-bottom: none!important;
+  border-top: none!important;
+}
+.ok {
+  display: none;
+}
+.ok.hide {
+  display: block;
+}
+.select.hide {
+  display: none;
+}
+.create-button {
+  border: 0.1vw solid black;
+  border-radius: 1vw;
+  background: linear-gradient(-45deg, #1c61fc, #54ffdf);
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+.create-button:hover {
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+.ok:hover {
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+#create-menu:focus {
+  display: none;
+}
+#create-menu > .select {
+  font-size: 1.5vw;
+}
+#create-menu > form {
+  background-color: #eee;
+  border: 0.1vw solid black;
+  bottom: 0;
+  height: 30vw;
+  left: 0;
+  left: 50%;
+  padding: 1vw;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 20vw;
+}
+#create-menu > form > * {
+  margin: 0.5vw 0;
+  width: 18vw;
+}
+#input-title.alert {
+  border-color: #ff0000;
+}
+#input-title.alert::placeholder {
+  color: #ff0000;
+}
+.create-menu__btn {
+  background-color: #ccc;
+  border: 0.1vw solid black;
+  border-radius: 1vw;
+  cursor: pointer;
+  height: 3vw;
+  outline: none;
+}
+.create-menu__btn:hover {
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+.create-menu__buttons {
+  bottom: 1vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 0!important;
+  position: absolute;
+}
+.create-menu__cancel {
+  cursor: pointer;
+  padding: 0.2vw 0.25vw;
+}
+.create-menu__input {
+  border: 0.1vw solid black;
+  padding: 0.25vw;
+  resize: none;
+  width: 18vw;
+}
+.select {
+  background: #fff;
+  border-radius: 1vw;
+  display: flex;
+  height: 1.5vw;
+  height: 2vw;
+  line-height: 3;
+  overflow: hidden;
+  padding: 0 1vw;
+  position: relative;
+  width: 8vw;
+  border: 0.1vw #000 solid;
+}
+#create-menu {
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 3vw;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1002;
+}
+select {
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  color: #000;
+  cursor: pointer;
+  flex: 1;
+  outline: 0;
+}
+#menu {
+  display: inline-table;
+  justify-content: space-between;
+  padding: 0 1vw;
+  width: 18vw;
+  position: fixed;
+  top: 6vw;
+}
+#menu > * {
+  width: 18vw!important;
+  height: 2vw;
+  margin: 0 0 1vw 0;
+  border-radius: 1vw;
+}
+#title-search {
+  border: 0.1vw solid #000;
+  border-radius: 1vw;
+  text-align: center;
+  background: #fff;
+}
+#title-search > i::before {
+  font-size: 1vw;
+}
+.title-search__bar {
+  font-size: 1vw;
+  border: none;
+  outline: none;
+  height: 1vw;
+  width: 15vw;
+}

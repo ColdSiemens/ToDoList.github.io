@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png">
+  <title>ToDoList</title>
+  <script src="https://kit.fontawesome.com/d842e68b2c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+      <img src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" alt="Logo">ToDoList
+  </header>
+  <aside id='menu'>
+    <div id='title-search'>
+      <input class='title-search__bar' type="text" size="40" placeholder="Search by title" />
+      <i class="fas fa-search"></i>
+    </div>
+    <div class="select">
+      <select id='status-search'>
+        <option selected>All</option>
+        <option value="open">Open</option>
+        <option value="done">Done</option>
+      </select>
+      <!--<i class="fas fa-angle-down"></i>-->
+    </div>
+    <div class="select">
+      <select id="priority-search">
+        <option selected>All</option>
+        <option value="High">High</option>
+        <option value="Normal">Normal</option>
+        <option value="Low">Low</option>
+      </select>
+    </div>
+    <button id='button-create' class="create-button">Create</button>
+  </aside>
+  <!-- Container-center wrapper  -->
+  <div id="create-menu" class='hide'>
+    <form>
+      <div class='create-menu__title'>
+        <div class='create-menu__text'>Title:</div>
+        <input id="title-input" maxlength="30" class='create-menu__input' type="text" size="20" placeholder="Your title.." />
+      </div>
+      <div class='create-menu__description'>
+        <div class='create-menu__text'>Description:</div>
+        <textarea id="description-input" maxlength="150" class='create-menu__input' type="text" size="20"
+          placeholder="Your description.."></textarea>
+      </div>
+      <div class='create-menu__priority'>
+        <div class='create-menu__text'>Priority:</div>
+        <div class='create-menu__menu'>
+          <div class='create-menu__content'></div>
+        </div>
+      </div>
+      <div class="select">
+        <select id="priority-input" class='create-menu__select'>
+          <option selected value="High">High</option>
+          <option value="Normal">Normal</option>
+          <option value="Low">Low</option>
+        </select>
+      </div>
+      <div class='create-menu__buttons'>
+        <button id='save-button' type="submit" class='create-menu__btn' value="Save">Save</button>
+        <button id='cancel-button' type="discard" class='create-menu__btn create-menu_cancel'>
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="container">
+    <div id="cards-grid">
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer>
+    <a href="https://instagram.com/lil__sober">LazyJoe</a>
+  </footer>
+</body>
+<script type="text/javascript" src="index.js"></script>
+
+</html>

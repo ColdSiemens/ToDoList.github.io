@@ -1,0 +1,49 @@
+// out: index.css, compress: false
+@import url(//db.onlinewebfonts.com/c/ba30d215ed1f0e32cb3b560b9b93bde1?family=ITC+Bauhaus);
+
+body {
+  margin: 0;
+  padding: 0 0 10vh 0;
+  background: #b0c4de;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  outline: none;
+  font-family: "ITC Bauhaus";
+  font-size: 1.5vw;
+  word-break: break-word;
+}
+i, i::before {
+  font-family:"Font Awesome 5 Pro"!important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.hide{
+  display: none;
+}
+a{
+  color: #fff;
+  text-decoration: none;
+}
+@col_main: rgb(119, 18, 250);
+@col_sub: rgb(235, 182, 37);
+@col_shad: rgb(251, 151, 19);
+@bg_gradient: linear-gradient(-45deg, #1c61fc, #54ffdf);
+@black: rgb(2, 0, 7);
+@white: #fff;
+
+@import "blocks/container.less";
+@import "blocks/header.less";
+@import "blocks/card.less";
+@import "blocks/create-button.less";
+@import "blocks/create-menu.less";
+@import "blocks/header.less";
+@import "blocks/menu.less";
