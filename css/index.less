@@ -1,5 +1,12 @@
 // out: index.css, compress: false
-@import url(//db.onlinewebfonts.com/c/ba30d215ed1f0e32cb3b560b9b93bde1?family=ITC+Bauhaus);
+@font-face {
+    font-family: 'bauhaus_lightregular';
+    src: url('bauhaus_light_regular-webfont.woff2') format('woff2'),
+         url('auhaus_light_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 body {
   margin: 0;
@@ -11,7 +18,7 @@ body {
 *:before {
   box-sizing: border-box;
   outline: none;
-  font-family: "ITC Bauhaus";
+  font-family: "bauhaus_lightregular";
   font-size: 1.5vw;
   word-break: break-word;
 }
