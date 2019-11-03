@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'bauhaus_lightregular';
-  src: url('blocks/bauhaus_light_regular-webfont.woff2') format('woff2'), url('blocks/auhaus_light_regular-webfont.woff') format('woff');
+  src: url('bauhaus_light_regular-webfont.woff2') format('woff2'), url('auhaus_light_regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
