@@ -1,6 +1,4 @@
 @font-face {
-  font-family: 'bauhaus_lightregular';
-  src: url('bauhaus_light_regular-webfont.woff2') format('woff2'), url('bauhaus_light_regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -176,7 +174,7 @@ footer {
   max-height: 13.75vw;
 }
 .edited-priority {
-  font-size: 1.5vw!important;
+  font-size: 1.5vw !important;
 }
 .edited-title,
 .edited-description {
@@ -190,7 +188,7 @@ footer {
 }
 .edit-select {
   border-radius: 1vw!important;
-  min-height: 3.125vw!important;
+  min-height: 3.125vw !important;
   width: fit-content !important;
 }
 .edit-select::after {
@@ -222,11 +220,11 @@ footer {
   cursor: context-menu;
 }
 .extra-menu__delete {
-  background-color: #f77!important;
+  background-color: #f77 !important;
   color: #fff;
 }
 .extra-menu__delete:hover {
-  background-color: #f99!important;
+  background-color: #f99 !important;
 }
 .extra-menu__edit {
   border-bottom: none!important;

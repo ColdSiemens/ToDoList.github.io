@@ -1,6 +1,6 @@
+import "./css/index.less";
 let allCards = [];
-let titleInput =
-document.getElementById("title-input"),
+const titleInput = document.getElementById("title-input"),
   cardsGrid = document.getElementById("cards-grid"),
   createMenu = document.getElementById("create-menu"),
   descriptionInput = document.getElementById("description-input"),
@@ -126,7 +126,10 @@ function createCard(card) {
     id="${"edited-title" + card.id}" class='edited-title hide'/>
     <div id='${"card__description" + card.id}' class='card__description'>
     ${card.description}</div>
-    <textarea value='${card.description}' maxlength="150" id="${"edited-description" + card.id}" class='edited-description hide'>${card.description}</textarea>
+    <textarea value='${
+      card.description
+    }' maxlength="150" id="${"edited-description" +
+    card.id}" class='edited-description hide'>${card.description}</textarea>
   </div>
   <div class='card__down'>
     <span id='${"card__priority" + card.id}' class='card__priority'>
@@ -152,11 +155,11 @@ function createCard(card) {
 </article>`;
   cardsGrid.insertAdjacentHTML("afterbegin", cardBlock);
   // Elements of extra-menu
-  extraEdit = document.querySelector(".extra-menu__edit");
-  extraDone = document.querySelector(".extra-menu__done");
-  circleDone = document.querySelector(".fa-circle");
-  checkDone = document.querySelector(".fa-check-circle");
-  extraDelete = document.querySelector(".extra-menu__delete");
+  const extraEdit = document.querySelector(".extra-menu__edit"),
+    extraDone = document.querySelector(".extra-menu__done"),
+    circleDone = document.querySelector(".fa-circle"),
+    checkDone = document.querySelector(".fa-check-circle"),
+    extraDelete = document.querySelector(".extra-menu__delete");
   // Events for extra-menu
   extraEdit.addEventListener("click", editCard);
   extraDone.addEventListener("click", doneCard);
@@ -172,7 +175,7 @@ function addCard() {
     titleInput.classList.add("alert");
   } else {
     let newCard = new Card({
-      id: 'x'+Date.now(),
+      id: "x" + Date.now(),
       title: titleInput.value,
       description: descriptionInput.value,
       priority: priorityInput.value,
@@ -214,7 +217,7 @@ function editCard(e) {
     // --
     dots = document.querySelector(idDots),
     ok = document.querySelector(idOk);
-    ok.addEventListener("click", saveOk);
+  ok.addEventListener("click", saveOk);
 
   // Swap between 'default' and 'editing'
   editedTitle.classList.toggle("hide");
