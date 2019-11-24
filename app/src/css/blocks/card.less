@@ -1,200 +1,170 @@
 // main: ../index.less
-#cards-grid
-{
-	display: grid;
-	grid-auto-flow: row dense;
-	grid-template-columns: repeat(4,1fr);
-	margin: 6vw 20vw;
+#cards-grid {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 6vw 20vw;
 }
-*
-{
-	transition: 0.25s;
+* {
+  transition: 0.25s;
 }
-.card__description,.card__title
-{
-	max-width: 13vw;
-	min-height: 3.125vw;
-	word-break: break-all break-word;
+.card__description,
+.card__title {
+  max-width: 13vw;
+  min-height: 3.125vw;
+  word-break: break-all break-word;
 }
-.card__down
-{
-	bottom: 0;
-	display: flex;
-	justify-content: space-between;
-	margin: 1vw 0;
-	position: absolute;
-	width: (15vw-2.3);
+.card__down {
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 1vw 0;
+  position: absolute;
+  width: (15vw-2.3);
 }
-.card__edit
-{
-	position: relative;
-	text-align: center;
+.card__edit {
+  position: relative;
+  text-align: center;
 }
-.card__edit:hover .extra-menu
-{
-	display: block;
+.card__edit:hover .extra-menu {
+  display: block;
 }
 .card__priority,
 .extra-img,
-.ok
-{
-	border: 0.1vw inset black;
-	border-radius: 1vw;
-	cursor: pointer;
-	padding: 0.5vw;
+.ok {
+  border: 0.1vw inset black;
+  border-radius: 1vw;
+  cursor: pointer;
+  padding: 0.5vw;
 }
-.card__title
-{
-	font-weight: bold;
+.card__title {
+  font-weight: bold;
 }
-.card__wrapper
-{
-	background: #ffe0d0;
-	border: 0.1vw solid black;
-	border-radius: 1vw;
-	display: inline-flex;
-	margin: 0 1vw 1vw 0;
-	min-height: 15vw;
-	padding: 1vw 1vw 5.3vw 1vw;
-	position: relative;
-	text-align: left;
-	width: 15vw;
+.card__wrapper {
+  background: #ffe0d0;
+  border: 0.1vw solid black;
+  border-radius: 1vw;
+  display: inline-flex;
+  margin: 0 1vw 1vw 0;
+  min-height: 15vw;
+  padding: 1vw 1vw 5.3vw 1vw;
+  position: relative;
+  text-align: left;
+  width: 15vw;
 }
-.card__wrapper.open
-{
-	background: #fff;
+.card__wrapper.open {
+  background: #fff;
 }
-.card__wrapper.open>.card__text>.card__title
-{
-	color: #000;
-	text-decoration: none;
+.card__wrapper.open > .card__text > .card__title {
+  color: #000;
+  text-decoration: none;
 }
-.card__wrapper.open>i.done,
-{
-	display: none;
+.card__wrapper.open > i.done {
+  display: none;
 }
-.card__wrapper.open>i.undone
-{
-	color: #000;
-	display: block;
-	font-size: 1.25vw;
-	height: 2vw;
-	position: absolute;
-	right: 1vw;
-	text-align: center;
-	top: 1vw;
-	width: 2vw;
+.card__wrapper.open > i.undone {
+  color: #000;
+  display: block;
+  font-size: 1.25vw;
+  height: 2vw;
+  position: absolute;
+  right: 1vw;
+  text-align: center;
+  top: 1vw;
+  width: 2vw;
 }
-.card__wrapper:hover
-{
-	box-shadow: 0 0 0.2vw 0 rgba(0,0,0,0.5);
-	transform: scale(1.025);
+.card__wrapper:hover {
+  box-shadow: 0 0 0.2vw 0 rgba(0, 0, 0, 0.5);
+  transform: scale(1.025);
 }
-.card__wrapper>.card__text>.card__title
-{
-	color: #888;
-	text-decoration: line-through;
+.card__wrapper > .card__text > .card__title {
+  color: #888;
+  text-decoration: line-through;
 }
-.card__wrapper>i.done
-{
-	color: #000;
-	display: block;
-	font-size: 1.25vw;
-	height: 2vw;
-	position: absolute;
-	right: 1vw;
-	text-align: center;
-	top: 1vw;
-	width: 2vw;
+.card__wrapper > i.done {
+  color: #000;
+  display: block;
+  font-size: 1.25vw;
+  height: 2vw;
+  position: absolute;
+  right: 1vw;
+  text-align: center;
+  top: 1vw;
+  width: 2vw;
 }
-.card__wrapper>i.undone
-{
-	display: none;
+.card__wrapper > i.undone {
+  display: none;
 }
-.edited-description
-{
-	height: 4vw;
-	height: fit-content;
-	resize: none;
+.edited-description {
+  height: 4vw;
+  height: fit-content;
+  resize: none;
   height: -webkit-fill-available;
   max-height: 13.75vw;
 }
-.edited-priority
-{
-	font-size: 1.5vw!important;
+.edited-priority {
+  font-size: 1.5vw !important;
 }
-.edited-title, .edited-description
-{
-	background: transparent;
-	border: none;
-	border-bottom: 0.05vw #000 solid;
-	font-size: 1.25vw;
-	margin: 0.5vw 0;
-	min-height: 2.125vw;
-	width: 100%;
+.edited-title,
+.edited-description {
+  background: transparent;
+  border: none;
+  border-bottom: 0.05vw #000 solid;
+  font-size: 1.25vw;
+  margin: 0.5vw 0;
+  min-height: 2.125vw;
+  width: 100%;
 }
-.edit-select
-{
-	border-radius: 1vw!important;
-	min-height: 3.125vw!important;
-	width: fit-content!important;
+.edit-select {
+  border-radius: 1vw !important;
+  min-height: 3.125vw !important;
+  width: fit-content !important;
 }
-.edit-select::after
-{
-	display: none;
+.edit-select::after {
+  display: none;
 }
-.extra-img
-{
-	font-size: 1vw!important;
-	height: 3vw;
-	min-width: 3vw;
+.extra-img {
+  font-size: 1vw !important;
+  height: 3vw;
+  min-width: 3vw;
   padding: 0.75vw 0.5vw 0.5vw;
 }
-.extra-menu
-{
-	cursor: context-menu;
-	position: absolute;
+.extra-menu {
+  cursor: context-menu;
+  position: absolute;
   display: none;
-	text-align: left;
-	transform: translateX(-1.8vw) translateY(-100%) translateY(1.15vw);
+  text-align: left;
+  transform: translateX(-1.8vw) translateY(-100%) translateY(1.15vw);
 }
-.extra-menu > button
-{
-	background-color: #ccc;
-	border: 0.1vw #000 solid;
-	font-size: 1vw;
-	outline: none;
-	padding: 1vh;
-	width: 6vw;
+.extra-menu > button {
+  background-color: #ccc;
+  border: 0.1vw #000 solid;
+  font-size: 1vw;
+  outline: none;
+  padding: 1vh;
+  width: 6vw;
 }
-.extra-menu > button:hover
-{
-	background-color: #eee;
-	cursor: context-menu;
+.extra-menu > button:hover {
+  background-color: #eee;
+  cursor: context-menu;
 }
-.extra-menu__delete
-{
-	background-color: #f77!important;
-	color: #fff;
+.extra-menu__delete {
+  background-color: #f77 !important;
+  color: #fff;
 }
-.extra-menu__delete:hover
-{
-	background-color: #f99!important;
+.extra-menu__delete:hover {
+  background-color: #f99 !important;
 }
-.extra-menu__edit
-{
-	border-bottom: none!important;
-	border-top: none!important;
+.extra-menu__edit {
+  border-bottom: none !important;
+  border-top: none !important;
 }
-.ok
-{
-	display: none;
+.ok {
+  display: none;
 }
-.ok.hide
-{
-	display: block;
+.ok.hide {
+  display: block;
 }
-.select.hide
-{
-	display: none;
+.select.hide {
+  display: none;
 }
