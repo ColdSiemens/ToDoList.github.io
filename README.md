@@ -1,5 +1,4 @@
 # ToDoList
-## For "Ciklum University: JS Band Internship"
 ## Functions:
 + Creating task cards with title, description and task priority;
 + Editing cards;
